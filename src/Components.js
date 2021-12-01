@@ -256,7 +256,7 @@ const Final = () => {
       <p className="mont txt-wht bg-org p-15 mes txt-al-ce">
         {/* You won {window.txt.win.spins} spins + {window.txt.win.prize} Welcome
         Bonus */}
-        You won {window.txt.win.spins}
+        You won {window.txt.win.spins} for {window.txt.win.prize}
       </p>
       <p className="mont txt-al-ce">
         {window.txt.winTxt.mes}{" "}
