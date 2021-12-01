@@ -159,45 +159,45 @@ export const srcs = {
   ],
   price: [
     {
-      src: "./img2/plat0.png",
+      src: "./img2/game10.png",
       alt: "25",
     },
     {
-      src: "./img2/plat25.png",
+      src: "./img2/game25.png",
       alt: "15",
     },
     {
-      src: "./img2/plat50.png",
+      src: "./img2/game50.png",
       alt: "10",
     },
     {
-      src: "./img2/plat10.png",
+      src: "./img2/game75.png",
       alt: "5",
     },
     {
-      src: "./img2/plat1.png",
+      src: "./img2/game1.png",
       alt: "1",
     },
   ],
   fs: [
     {
-      src: "./img2/plat15fs.png",
+      src: "./img2/game25fs.png",
       alt: "25",
     },
     {
-      src: "./img2/plat10fs.png",
+      src: "./img2/game10fs.png",
       alt: "50",
     },
     {
-      src: "./img2/plat100fs.png",
+      src: "./img2/game50fs.png",
       alt: "500",
     },
     {
-      src: "./img2/plat35fs.png",
+      src: "./img2/game75fs.png",
       alt: "10",
     },
     {
-      src: "./img2/plat55fs.png",
+      src: "./img2/game100fs.png",
       alt: "100",
     },
   ],  
