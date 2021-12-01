@@ -121,7 +121,7 @@ const Cash = (props) => {
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        Your first digit is a {window.txt.prize} !
+        {window.txt.first.head} {window.txt.prize} {window.txt.first.pro}!
       </h4>
       <p className="lato lato-l txt-al-ce"> {window.txt.cash.main}</p>
       <button className="btn mont p-15 w-50" onClick={clicked}>
@@ -189,9 +189,9 @@ const Multiplier = (props) => {
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        Your second digit is a{" "}
+        {window.txt.fs.mes1}{" "}
         {ctr === 2
-          ? window.txt.win.prize + " !"
+          ? window.txt.spinVal
           : window.txt.win.spins + " spins"}
       </h4>
       <p className="lato lato-l txt-al-ce">
@@ -256,11 +256,11 @@ const Final = () => {
       <p className="mont txt-wht bg-org p-15 mes txt-al-ce">
         {/* You won {window.txt.win.spins} spins + {window.txt.win.prize} Welcome
         Bonus */}
-        You won {window.txt.win.spins} Cash Back
+        You won {window.txt.win.spins}
       </p>
       <p className="mont txt-al-ce">
-        Very nice you did good! We have reserved your exclusive cash back for{" "}
-        {firstname ? `:${firstname} ${surname} ${city}` : "You"}
+        {window.txt.winTxt.mes}{" "}
+        {firstname ? `:${firstname} ${surname} ${city}` : "firstname"}
       </p>
       <p className="lato lato-l txt-al-ce"> {window.txt.final}</p>
       <button

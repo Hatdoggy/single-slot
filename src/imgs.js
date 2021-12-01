@@ -157,4 +157,48 @@ export const srcs = {
       alt: "1",
     },
   ],
+  price: [
+    {
+      src: "./img2/royal2.png",
+      alt: "25",
+    },
+    {
+      src: "./img2/royal15.png",
+      alt: "15",
+    },
+    {
+      src: "./img2/royal10.png",
+      alt: "10",
+    },
+    {
+      src: "./img2/royal5.png",
+      alt: "5",
+    },
+    {
+      src: "./img2/royal1.png",
+      alt: "1",
+    },
+  ],
+  fs: [
+    {
+      src: "./img2/roy25fs.png",
+      alt: "25",
+    },
+    {
+      src: "./img2/roy50fs.png",
+      alt: "50",
+    },
+    {
+      src: "./img2/roy500fs.png",
+      alt: "500",
+    },
+    {
+      src: "./img2/roy10fs.png",
+      alt: "10",
+    },
+    {
+      src: "./img2/roy100fs.png",
+      alt: "100",
+    },
+  ],  
 };

@@ -113,13 +113,14 @@ async function spin(ctr) {
 export default spin;
 
 const check = (ctr) => {
+  console.log(srcs)
   let ret = 0;
   switch (ctr) {
     case 1:
-      ret = srcs.back;
+      ret = srcs.price;
       break;
     case 2:
-      ret = srcs.back2;
+      ret = srcs.fs;
       break;
     // case 3:
     //   ret = srcs.spins;
