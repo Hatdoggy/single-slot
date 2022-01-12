@@ -1,0 +1,136 @@
+@media only screen and (max-width: 1000px) {
+  .btn {
+    width: 80% !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li {
+    text-align: center !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    width: 100% !important;
+  }
+  .terms {
+    position: absolute;
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .door {
+    margin-right: 15% !important;
+    width: 50% !important;
+    margin-top: 15% !important;
+    height: 90vw !important;
+  }
+  section {
+    width: 100% !important;
+    align-items: center !important;
+  }
+  span {
+    width: 100% !important;
+    text-align: center;
+  }
+  .pop {
+    width: 90% !important;
+    h4 {
+      width: 80% !important;
+    }
+  }
+  svg {
+    width: 80% !important;
+  }
+  .p-l {
+    padding-left: 0 !important;
+  }
+  .final {
+    height: auto !important;
+    p,
+    button {
+      margin-top: 2%;
+    }
+    .mes {
+      padding: 2% !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) and (orientation: landscape) {
+  main {
+    section {
+      width: 100% !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      .cont {
+        width: 50% !important;
+        height: 100% !important;
+        img {
+          width: auto !important;
+        }
+
+        .blob-b {
+          display: none !important;
+        }
+      }
+    }
+    .p-l {
+      padding-left: 0 !important;
+    }
+  }
+
+  .mobTxt {
+    color: black !important;
+  }
+
+  .machCont {
+    padding: 2% !important;
+    flex-direction: column !important;
+    .blob-m {
+      display: none !important;
+    }
+    header {
+      align-items: center !important;
+      p {
+        display: none !important;
+      }
+      span {
+        width: 80% !important;
+        text-align: center !important;
+        font-size: 0.6rem !important;
+      }
+    }
+  }
+
+  .pop {
+    width: 50% !important;
+    height: 75% !important;
+    h4 {
+      width: 80% !important;
+    }
+  }
+  .final {
+    height: auto !important;
+    p,
+    button {
+      margin-top: 2%;
+    }
+    .mes {
+      padding: 2% !important;
+    }
+  }
+}
+
+/* Portrait IPAD */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
