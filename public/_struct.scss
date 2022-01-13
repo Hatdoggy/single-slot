@@ -368,7 +368,7 @@
     }
   }
   &-drk {
-    color: $drk;
+    color: $txt;
   }
   &-wht {
     color: $wht;
@@ -383,7 +383,7 @@
   color: white;
   border: none;
   border-radius: 15px;
-  background-image: $txtBg;
+  background: $blu;
   transition: 0.5s ease-in-out;
   &:hover {
     cursor: pointer;
@@ -422,7 +422,7 @@
 /* Background */
 .bg {
   &-img {
-    background-image: url("./img/bg.png");
+    background-image: url("./img/bgS.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -433,6 +433,11 @@
   }
   &-org {
     background-image: $txtBg;
+    color: white;
+    border-radius: 15px;
+  }
+  &-blu {
+    background-color: $blu;
     color: white;
     border-radius: 15px;
   }

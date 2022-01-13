@@ -14,23 +14,21 @@ const Container = (props) => {
   const { intro, info, upd, ctr } = props;
   return (
     <div className="w-50 h-100 flx flx-jc-ce flx-ai-ce">
-      {intro ? (
-        <img src="./img/win.png" alt="win" className="w-80 trans image" />
-      ) : (
+      {!intro &&
         <div className="flx flx-jc-ce flx-ai-ce w-100 h-100">
           <div className="w-20 door ovr-hide trans">
             <div className="boxes"></div>
           </div>
           <Machine upd={upd} ctr={ctr} info={info} />
         </div>
-      )}
+        }
     </div>
   );
 };
 
 const Header = () => {
   return (
-    <header className="bg-org flx flx-jc-ce flx-ai-ce txt-wht p-20  shdw-btn">
+    <header className="bg-blu flx flx-jc-ce flx-ai-ce txt-wht p-20  shdw-btn">
       <h4 className="mont">Win cash daily!</h4>
     </header>
   );
@@ -38,7 +36,7 @@ const Header = () => {
 
 const Terms = () => {
   return (
-    <header className="flx-col flx flx-jc-ce flx-ai-strt terms">
+    <header className="flx-col flx flx-jc-ce flx-ai-strt terms txt-drk">
       <p className="mont">Terms and Conditions</p>
       <span className="lato lato-l w-65">
         To enhance your experience on our site, we use 'cookies'. By browsing
@@ -56,10 +54,8 @@ const Greet = (props) => {
 
   const disappear = () => {
     let btn = document.querySelector(".play");
-    let img = document.querySelector(".image");
 
     btn.style.animation = "out 1s";
-    img.style.animation = "out 1s";
 
     setTimeout(() => {
       hide(false);
@@ -69,7 +65,7 @@ const Greet = (props) => {
   return (
     <section className="flx flx-col flx-jc-sp flx-ai-strt p-l h-100 w-50 trans">
       <Header />
-      <div className="w-80">
+      <div className="w-80 txt-drk">
         <h2 className="mont">{window.txt.greet.main}</h2>
         <p className="lato lato-l w-80 m-t-5">{window.txt.greet.desc}</p>
         <h4 className="mont m-t-5">{window.txt.how.main}</h4>
@@ -120,7 +116,7 @@ const Cash = (props) => {
 
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
-      <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
+      <h4 className="p-20 txt-wht mont bg-blu w-80 txt-al-ce">
         {window.txt.first.head} {window.txt.prize} {window.txt.first.pro}!
       </h4>
       <p className="lato lato-l txt-al-ce"> {window.txt.cash.main}</p>
@@ -188,7 +184,7 @@ const Multiplier = (props) => {
 
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
-      <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
+      <h4 className="p-20 txt-wht mont bg-blu w-80 txt-al-ce">
         {window.txt.fs.mes1}{" "}
         {ctr === 2
           ? window.txt.spinVal
@@ -236,7 +232,7 @@ const Spins = (props) => {
   };
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
-      <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
+      <h4 className="p-20 txt-wht mont bg-blu w-80 txt-al-ce">
         You Won {window.txt.spinVal} SPINS
       </h4>
       <p className="lato lato-l txt-al-ce"> {window.txt.spins.main}</p>
@@ -250,19 +246,19 @@ const Spins = (props) => {
 const Final = () => {
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop h-100 flx flx-col flx-jc-sp flx-ai-ce final">
-      <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
+      <h4 className="p-20 txt-wht mont bg-blu w-80 txt-al-ce">
         CONGRATULATIONS
       </h4>
-      <p className="mont txt-wht bg-org p-15 mes txt-al-ce">
+      <p className="mont txt-wht bg-blu p-15 mes txt-al-ce">
         {/* You won {window.txt.win.spins} spins + {window.txt.win.prize} Welcome
         Bonus */}
         You won {window.txt.win.spins} for {window.txt.win.prize}
       </p>
-      <p className="mont txt-al-ce">
+      <p className="mont txt-al-ce txt-drk">
         {window.txt.winTxt.mes}{" "}
         {firstname ? `:${firstname} ${surname} ${city}` : "firstname"}
       </p>
-      <p className="lato lato-l txt-al-ce"> {window.txt.final}</p>
+      <p className="lato lato-l txt-al-ce txt-drk"> {window.txt.final}</p>
       <button
         className="btn mont p-15 w-50 product-button"
         data-product-id="1"
@@ -358,14 +354,15 @@ const MobGreet = (props) => {
         {how && <HowTo upd={upd} />}
       </div>
 
-      <div className="h-50 pos-rel flx flx-jc-ce flx-ai-e cont">
-        <img src="./img/win.png" alt="win" className="w-80 z-main pos-rel" />
-        <img
+      <div className="pos-rel flx flx-jc-ce flx-ai-e cont over-hide w-100 h-50">
+        <img src="./img/bgSnow.png" alt="win" className="z-bg pos-rel snow" />
+        {/* <img
           src="./img/blob.svg"
           alt="blob"
           className="w-100 pos-abs z-bg blob-b"
-        />
+        /> */}
       </div>
+      <Terms/>
     </section>
   );
 };
@@ -378,7 +375,7 @@ const Mob = (props) => {
     play: false,
   });
   return (
-    <main className="flx flx-jc-ce flx-ai-ce h-100 w-100 bg-img2">
+    <main className="flx flx-jc-ce flx-ai-ce h-100 w-100">
       {stat.play ? (
         <section className="flx flx-col flx-jc-sp flx-ai-strt p-l h-100 w-50 trans pos-rel ovr-hide machCont">
           <div className="w-20 door ovr-hide trans">
@@ -386,9 +383,9 @@ const Mob = (props) => {
           </div>
           <Machine upd={upd} ctr={ctr} info={info} />
           <img
-            src="./img/blob.svg"
+            src="./img/bgSnow.png"
             alt="blob"
-            className="w-100 pos-abs z-bg blob-m"
+            className="snow2 pos-abs z-bg"
           />
           <Terms />
         </section>

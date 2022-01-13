@@ -606,7 +606,7 @@ span {
 }
 
 .txt-drk {
-  color: #000000;
+  color: #344D7D;
 }
 
 .txt-wht {
@@ -621,8 +621,7 @@ span {
   color: white;
   border: none;
   border-radius: 15px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fe5c29), to(#ffd55e));
-  background-image: linear-gradient(to right, #fe5c29, #ffd55e);
+  background: #455CAB;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -665,7 +664,7 @@ span {
 
 /* Background */
 .bg-img {
-  background-image: url("./img/bg.png");
+  background-image: url("./img/bgS.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -679,6 +678,12 @@ span {
 .bg-org {
   background-image: -webkit-gradient(linear, left top, right top, from(#fe5c29), to(#ffd55e));
   background-image: linear-gradient(to right, #fe5c29, #ffd55e);
+  color: white;
+  border-radius: 15px;
+}
+
+.bg-blu {
+  background-color: #455CAB;
   color: white;
   border-radius: 15px;
 }
@@ -1009,6 +1014,16 @@ span {
 
 .lato-reg {
   font-weight: 400;
+}
+
+.snow {
+  bottom: -5%;
+}
+
+.snow2 {
+  width: 300%;
+  bottom: -5%;
+  z-index: -1;
 }
 
 h1 {
