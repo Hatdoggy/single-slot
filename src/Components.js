@@ -304,8 +304,8 @@ const GreetTxt = (prop) => {
   };
   return (
     <div className="w-80 flx flx-col flx-ai-ce flx-jc-ce mobTxt">
-      <h2 className="mont txt-wht">{window.txt.greet.main}</h2>
-      <p className="lato lato-reg w-80 m-t-5 txt-wht">
+      <h2 className="mont txt-drk">{window.txt.greet.main}</h2>
+      <p className="lato lato-reg w-80 m-t-5 txt-drk">
         {window.txt.greet.desc}
       </p>
       <button
@@ -328,8 +328,8 @@ const HowTo = (prop) => {
   };
   return (
     <div className="w-80 flx flx-col flx-ai-ce flx-jc-ce mobTxt">
-      <h2 className="txt-wht mont txt-wht">{window.txt.how.main}</h2>
-      <p className="txt-wht lato lato-reg w-80 m-t-5 txt-wht">
+      <h2 className="mont txt-drk">{window.txt.how.main}</h2>
+      <p className="txt-drk lato lato-reg w-80 m-t-5">
         {window.txt.how.desc}
       </p>
       <button
