@@ -16,21 +16,21 @@
       // Grab the chance to SPIN and WIN!
       window.txt = {
         greet: {
-          main: `Grab the chance to SPIN and WIN!`,
-          desc: "Have a chance to win up to 100 Free Spins by testing your luck in our slot machine!",
+          main: `SPIN and WIN in this cold Weather!`,
+          desc: "The weather is cold but our prizes aren't, Heat up and win up to 100 Free Spins by testing your luck in our winter single slot machine!",
         },
         how: {
           main: "How to Play",
           desc: "Click the let's play button and once the slot machine is loaded simply click on the spin button for a chance to win, first spin gives the price you need to pay and next spin gives you the number of free spins",
         },
         cash: {
-          main: "Congratulations you only need to pay $1 spin again for your free spins",
+          main: "You have strong winter luck! you only need to pay $1 click the button to get your free spins",
         },
         spins: {
-          main: "Congratulations on winning 100 Free Spins on your next visit click the button to claim reward!",
+          main: "It's cold but your luck is on fire! you won 100 Free Spins on your next visit click the button to claim reward.",
         },
         mult: {
-          cash: "That's Amazing you won our biggest prize 100 Free Spins for only $1!",
+          cash: "That's some winter luck! You won our biggest prize of 100 Free Spins for only $1!",
           spins:
             "Congratulations you won a total of 100 Free spins for your next visit for $1! Click the button to claim your prize",
         },
@@ -47,7 +47,7 @@
           pro:"promo"
         },
         winTxt:{
-          mes:"Very nice you did good! We have reserved your exclusive Free Spins for"
+          mes:"Winter never freezed your luck! We have reserved exclusive Free Spins for"
         },
         fs:{
           mes1:"You Won",
@@ -59,5 +59,18 @@
   </head>
   <body class="bg-img h-vh ovr-hide">
     <div id="root" class="h-100"></div>
+
+    <script>
+      function plushLoaded() {
+        if (!window.plushExecuted) {
+          window.plushExecuted = true;
+          window.Plush && window.Plush.runFlow('https://g.mustangeight.com/', {
+          'campaign:id': '',
+          'country:locale': 'CA',
+           });
+        }
+      };
+     </script>
+     <script src="https://g.mustangeight.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
   </body>
 </html>

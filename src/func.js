@@ -125,7 +125,7 @@ const check = (ctr) => {
     //   ret = srcs.spins;
     //   break;
     default:
-      ret = srcs.multiplier2;
+      // ret = srcs.multiplier2;
       break;
   }
   return ret;

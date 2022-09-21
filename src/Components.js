@@ -29,7 +29,7 @@ const Container = (props) => {
 const Header = () => {
   return (
     <header className="bg-blu flx flx-jc-ce flx-ai-ce txt-wht p-20  shdw-btn">
-      <h4 className="mont">Win cash daily!</h4>
+      <h4 className="mont">Earn Winter cash daily!</h4>
     </header>
   );
 };
