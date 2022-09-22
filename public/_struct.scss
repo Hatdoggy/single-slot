@@ -383,13 +383,13 @@
   color: #fff;
   border: 1px solid $wht;
   border-radius: 50px;
-  background-color: #00539F;
+  background-color: #244DC2;
   transition: 0.5s ease-in-out;
 
   &-trans{
-    border: 1px solid #00539F;
+    border: 1px solid #244DC2;
     background-color: transparent;
-    color: #00539F;
+    color: #244DC2;
   }
 
   &:hover {
@@ -439,7 +439,7 @@
     background-repeat: no-repeat;
   }
   &-org {
-    background-color: #00539F;
+    background-color: #244DC2;
     color: white;
     border: 1px solid $wht;
   }

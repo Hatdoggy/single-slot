@@ -621,15 +621,15 @@ span {
   color: #fff;
   border: 1px solid white;
   border-radius: 50px;
-  background-color: #00539F;
+  background-color: #244DC2;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
 .btn-trans {
-  border: 1px solid #00539F;
+  border: 1px solid #244DC2;
   background-color: transparent;
-  color: #00539F;
+  color: #244DC2;
 }
 
 .btn:hover {
@@ -682,7 +682,7 @@ span {
 }
 
 .bg-org {
-  background-color: #00539F;
+  background-color: #244DC2;
   color: white;
   border: 1px solid white;
 }
