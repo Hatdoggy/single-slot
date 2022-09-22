@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@700&display=swap");
+@import "_var";
+@import "_def";
+@import "_struct";
+@import "_query";
+
+.mont {
+  font-family: $mont;
+}
+.lato {
+  font-family: $lato;
+  &-l {
+    font-weight: 300;
+  }
+  &-reg {
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 7rem);
+}
+h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+h3 {
+  font-size: clamp(1.8rem, 1.9vw, 1.95rem);
+}
+h4 {
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+}
+p,
+button {
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+}
+span {
+  font-size: clamp(0.75rem, 0.8vw, 0.85rem);
+  line-height: 1.5;
+}
+
+.blck {
+  fill: $drk;
+}
+.lght {
+  fill: #ffe34f;
+}
+
+.blob {
+  &-b {
+    bottom: -15%;
+    right: -5%;
+    z-index: -1;
+  }
+  &-m {
+    bottom: 25%;
+    right: -5%;
+    z-index: -1;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.door {
+  height: 30vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 8%;
+  margin-right: 5%;
+}
+
+
+.giftImg{
+  position: absolute;
+  bottom: -15%;
+}
+
+.logo{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#productName{
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+}
