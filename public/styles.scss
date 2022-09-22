@@ -72,3 +72,19 @@ span {
   margin-top: 8%;
   margin-right: 5%;
 }
+
+
+.giftImg{
+  position: absolute;
+  bottom: -15%;
+}
+
+.logo{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#productName{
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+}

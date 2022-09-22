@@ -55,7 +55,7 @@ let fluxf = getURLParameter("fluxf");
 let fluxffn = getURLParameter("fluxffn");
 
 function ActionRedirect(action) {
-  window.location.replace(
+  window.open(
     ffdomain +
       "/?flux_action=" +
       action +
@@ -65,18 +65,13 @@ function ActionRedirect(action) {
       fluxffn +
       "&flux_sess=" +
       session
-  );
+  ,'_blank');
 }
 
 let current = 1;
 
 const shuffle = ([...arr]) => {
   let m = arr.length;
-
-  // while (m) {
-  //   const i = Math.floor(Math.random() * m--);
-  //   [arr[m], arr[i]] = [arr[i], arr[m]];
-  // }
 
   return arr;
 };
@@ -121,10 +116,23 @@ const check = (ctr) => {
     case 2:
       ret = srcs.back2;
       break;
-    // case 3:
-    //   ret = srcs.spins;
-    //   break;
     default:
+
+      let currentIndex = srcs.multiplier2.length,  randomIndex,last=srcs.multiplier2.length-1;
+
+      // While there remain elements to shuffle.
+      while (currentIndex != 0) {
+    
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+    
+        // And swap it with the current element.
+        [srcs.multiplier2[currentIndex], srcs.multiplier2[randomIndex]] = [
+          srcs.multiplier2[randomIndex], srcs.multiplier2[currentIndex]];
+      }
+      console.log(srcs.multiplier2[last]);
+      window.txt.src = srcs.multiplier2[last];
       ret = srcs.multiplier2;
       break;
   }
@@ -134,7 +142,7 @@ const check = (ctr) => {
 export const init = (firstInit = true, groups = 1, duration = 1, ctr) => {
   let pool = [];
   let items = check(current);
-
+  
   const doors = document.querySelectorAll(".door");
   if (!ctr) {
     pool.push(items[0]);

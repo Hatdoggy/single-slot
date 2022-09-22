@@ -15,7 +15,7 @@ const Container = (props) => {
   return (
     <div className="w-50 h-100 flx flx-jc-ce flx-ai-ce">
       {intro ? (
-        <img src="./img/win.png" alt="win" className="w-80 trans image" />
+        <img src="./img/win2.png" alt="win" className="giftImg w-80trans image" />
       ) : (
         <div className="flx flx-jc-ce flx-ai-ce w-100 h-100">
           <div className="w-20 door ovr-hide trans">
@@ -121,11 +121,12 @@ const Cash = (props) => {
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        Your first digit is a {window.txt.prize} !
+        {window.txt.loseTxt1.head}
       </h4>
-      <p className="lato lato-l txt-al-ce"> {window.txt.cash.main}</p>
-      <button className="btn mont p-15 w-50" onClick={clicked}>
-        PROCEED
+      <p className="lato lato-l txt-al-ce"> 
+        {window.txt.loseTxt1.mes}</p>
+      <button className="btn mont p-15 w-80" onClick={clicked}>
+        Spin Again
       </button>
     </div>
   );
@@ -163,46 +164,18 @@ const Multiplier = (props) => {
     }, 300);
   };
 
-  useEffect(() => {
-    // if (ctr === 4) {
-    //   setTimeout(() => {
-    //     upd({
-    //       ...info,
-    //       ctr: ctr + 1,
-    //       mult: false,
-    //       final: true,
-    //     });
-    //   }, 2000);
-    // }
-    if (ctr === 2) {
-      setTimeout(() => {
-        upd({
-          ...info,
-          ctr: ctr + 1,
-          mult: false,
-          final: true,
-        });
-      }, 3500);
-    }
-  }, []);
-
   return (
     <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        Your second digit is a{" "}
-        {ctr === 2
-          ? window.txt.win.prize + " !"
-          : window.txt.win.spins + " spins"}
+        {window.txt.loseTxt1.head2}
       </h4>
-      <p className="lato lato-l txt-al-ce">
-        {" "}
-        {ctr === 2 ? window.txt.mult.cash : window.txt.mult.spins}
-      </p>
-      {/* {ctr === 2 && (
-        <button className="btn mont p-15 w-50" onClick={clicked}>
-          FREE SPINS
+      <p className="lato lato-l txt-al-ce"> 
+        {window.txt.loseTxt1.mes2}</p>
+      {ctr === 2 && (
+        <button className="btn mont p-15 w-80" onClick={clicked}>
+          Spin Again
         </button>
-      )} */}
+      )}
     </div>
   );
 };
@@ -211,60 +184,74 @@ const Spins = (props) => {
   const { info, upd } = props;
 
   const clicked = () => {
-    init();
-    anim();
     const { pop, ctr } = info;
-    setTimeout(() => {
-      upd({
-        ...info,
-        pop: false,
-      });
-    }, 300);
-    setTimeout(() => {
-      spin(ctr);
-      drop();
-      setTimeout(() => {
-        upd({
-          ...info,
-          pop: true,
-          ctr: ctr + 1,
-          mult: true,
-          spins: false,
-        });
-      }, 4000);
-    }, 1000);
+    upd({
+      spins: false,
+    })
+    upd({
+      ...info,
+      pop: true,
+      ctr: ctr + 1,
+      mult: false,
+      spins: false,
+      final: true,
+    });
   };
+
   return (
-    <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
+    <div className="w-30 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        You Won {window.txt.spinVal} SPINS
+        You Won a brand new {window.txt.src.alt}
       </h4>
+      <img src={window.txt.src.src} alt={window.txt.src.alt} id="selProd" className="m-t-2 m-b-2 w-30"/>
       <p className="lato lato-l txt-al-ce"> {window.txt.spins.main}</p>
-      <button className="btn mont p-15 w-50" onClick={clicked}>
-        MULTIPLIER
+      <button className="btn mont p-15 w-80" onClick={clicked}>
+        Proceed
       </button>
     </div>
   );
 };
 
 const Final = () => {
+
+  const [finBtn,updFin] = useState(0);
+
+  const clicked = (e)=>{
+    let target = e.target;
+    let sibs = target.parentNode.childNodes;
+    let newId = target.dataset.id;
+
+    sibs.forEach((elem)=>{
+      elem.classList.add('btn-trans');
+    })
+
+    target.classList.remove('btn-trans');
+    document.querySelector('.product-button').dataset.productId = newId;
+    document.querySelector('#productName').innerHTML = target.textContent ;
+  }
+
+  useEffect(()=>{
+    document.querySelector(`[data-id='${window.txt.src.id}']`).classList.remove('btn-trans');
+  })
+
   return (
-    <div className="w-30 h-50 flx flx-col flx-jc-sp flx-ai-ce p-20 bg-wht brd pop h-100 flx flx-col flx-jc-sp flx-ai-ce final">
+    <div className="w-30 flx flx-col flx-jc-sp flx-ai-ce p-50 bg-wht brd pop flx flx-col flx-jc-sp flx-ai-ce final">
       <h4 className="p-20 txt-wht mont bg-org w-80 txt-al-ce">
-        CONGRATULATIONS
+        {window.txt.finTxt.head}
       </h4>
-      <p className="mont txt-wht bg-org p-15 mes txt-al-ce">
-        {/* You won {window.txt.win.spins} spins + {window.txt.win.prize} Welcome
-        Bonus */}
-        You won {window.txt.win.spins} Cash Back
+      <p className="lato txt-al-ce m-t-5">
+        {window.txt.finTxt.first} <span className="mont" id="productName">{window.txt.src.alt}</span>{" "} for {firstname ? `:${firstname} ${surname} ${city}` : ""}
       </p>
-      <p className="mont txt-al-ce">
-        Very nice you did good! We have reserved your exclusive cash back for{" "}
-        {firstname ? `:${firstname} ${surname} ${city}` : "You"}
-      </p>
-      <p className="lato lato-l txt-al-ce"> {window.txt.final}</p>
+      <div id="prodsCnt" className="flx flx-col flx-jc-ce flx-ai-ce w-100 m-t-2">
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='1' onClick={clicked}>{window.txt.prods[0]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='2' onClick={clicked}>{window.txt.prods[1]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='3' onClick={clicked}>{window.txt.prods[2]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='4' onClick={clicked}>{window.txt.prods[3]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='5' onClick={clicked}>{window.txt.prods[4]}</button>
+      </div>
+      <p className="lato lato-l txt-al-ce m-t-5"> {window.txt.final}</p>
       <button
-        className="btn mont p-15 w-50 product-button"
+        className="btn mont p-15 w-80 product-button m-t-2"
         data-product-id="1"
         onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}
       >
@@ -359,7 +346,7 @@ const MobGreet = (props) => {
       </div>
 
       <div className="h-50 pos-rel flx flx-jc-ce flx-ai-e cont">
-        <img src="./img/win.png" alt="win" className="w-80 z-main pos-rel" />
+        <img src="./img/win2.png" alt="win" className="z-main pos-rel" />
         <img
           src="./img/blob.svg"
           alt="blob"

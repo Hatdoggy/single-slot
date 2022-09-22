@@ -619,12 +619,17 @@ span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
-  border: none;
-  border-radius: 15px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fe5c29), to(#ffd55e));
-  background-image: linear-gradient(to right, #fe5c29, #ffd55e);
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: #F96302;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+}
+
+.btn-trans {
+  border: 1px solid #F96302;
+  background-color: transparent;
+  color: #F96302;
 }
 
 .btn:hover {
@@ -665,22 +670,21 @@ span {
 
 /* Background */
 .bg-img {
-  background-image: url("./img/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg-img2 {
   background-image: url("./img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.bg-img2 {
+  background-image: url("./img/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bg-org {
-  background-image: -webkit-gradient(linear, left top, right top, from(#fe5c29), to(#ffd55e));
-  background-image: linear-gradient(to right, #fe5c29, #ffd55e);
+  background-color: #F96302;
   color: white;
-  border-radius: 15px;
+  border: 1px solid white;
 }
 
 .bg-wht {
@@ -915,10 +919,14 @@ span {
   }
   .final {
     height: auto !important;
+    padding: 20px !important;
   }
   .final p,
   .final button {
     margin-top: 2%;
+  }
+  .final button {
+    width: 100% !important;
   }
   .final .mes {
     padding: 2% !important;
@@ -1081,5 +1089,20 @@ span {
   width: 20%;
   margin-top: 8%;
   margin-right: 5%;
+}
+
+.giftImg {
+  position: absolute;
+  bottom: -15%;
+}
+
+.logo {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#productName {
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
 }
 /*# sourceMappingURL=styles.css.map */

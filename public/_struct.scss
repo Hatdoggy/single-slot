@@ -381,10 +381,17 @@
   font-family: $mont;
   font-weight: bold;
   color: white;
-  border: none;
-  border-radius: 15px;
-  background-image: $txtBg;
+  border: 1px solid $wht;
+  border-radius: 50px;
+  background-color: #F96302;
   transition: 0.5s ease-in-out;
+
+  &-trans{
+    border: 1px solid #F96302;
+    background-color: transparent;
+    color: #F96302;
+  }
+
   &:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -422,19 +429,19 @@
 /* Background */
 .bg {
   &-img {
-    background-image: url("./img/bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &-img2 {
     background-image: url("./img/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
+  &-img2 {
+    background-image: url("./img/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   &-org {
-    background-image: $txtBg;
+    background-color: #F96302;
     color: white;
-    border-radius: 15px;
+    border: 1px solid $wht;
   }
   &-wht {
     background-color: white;
