@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App h-100 w-100 pos-rel">
-      <img src="./img/logoWal.svg" alt="logo" className="logo"/>
+      <img src="./img/logoAlb.svg" alt="logo" className="logo"/>
       {info.pop && <Pop info={info} upd={updInfo} />}
       {mobile || land ? (
         <Mob

@@ -380,16 +380,16 @@
   padding: 15px;
   font-family: $mont;
   font-weight: bold;
-  color: #ffca2b;
+  color: #fff;
   border: 1px solid $wht;
   border-radius: 50px;
-  background-color: #0071CE;
+  background-color: #00539F;
   transition: 0.5s ease-in-out;
 
   &-trans{
-    border: 1px solid #0071CE;
+    border: 1px solid #00539F;
     background-color: transparent;
-    color: #0071CE;
+    color: #00539F;
   }
 
   &:hover {
@@ -439,7 +439,7 @@
     background-repeat: no-repeat;
   }
   &-org {
-    background-color: #0071CE;
+    background-color: #00539F;
     color: white;
     border: 1px solid $wht;
   }
