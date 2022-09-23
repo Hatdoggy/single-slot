@@ -231,6 +231,7 @@ const Final = () => {
   }
 
   useEffect(()=>{
+    document.querySelector('.product-button').dataset.productId = window.txt.src.id
     document.querySelector(`[data-id='${window.txt.src.id}']`).classList.remove('btn-trans');
   })
 
