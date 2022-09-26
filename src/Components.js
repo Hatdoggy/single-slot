@@ -31,7 +31,7 @@ const Container = (props) => {
 const Header = () => {
   return (
     <header className="bg-org flx flx-jc-ce flx-ai-ce txt-wht p-20  shdw-btn">
-      <h4 className="mont">Win cash daily!</h4>
+    <h4 className="mont">{window.txt.head}</h4>
     </header>
   );
 };
@@ -244,11 +244,10 @@ const Final = () => {
         {window.txt.finTxt.first} <span className="mont" id="productName">{window.txt.src.alt}</span>{" "} for {firstname ? `:${firstname} ${surname} ${city}` : ""}
       </p>
       <div id="prodsCnt" className="flx flx-col flx-jc-ce flx-ai-ce w-100 m-t-2">
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='1' onClick={clicked}>{window.txt.prods[0]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='2' onClick={clicked}>{window.txt.prods[1]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='3' onClick={clicked}>{window.txt.prods[2]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='4' onClick={clicked}>{window.txt.prods[3]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='5' onClick={clicked}>{window.txt.prods[4]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='1' onClick={clicked}>{window.txt.prods[1]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='2' onClick={clicked}>{window.txt.prods[2]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='3' onClick={clicked}>{window.txt.prods[3]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='4' onClick={clicked}>{window.txt.prods[4]}</button>
       </div>
       <p className="lato lato-l txt-al-ce m-t-5"> {window.txt.final}</p>
       <button
