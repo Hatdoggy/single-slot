@@ -39,13 +39,14 @@ const Header = () => {
 const Terms = () => {
   return (
     <header className="flx-col flx flx-jc-ce flx-ai-strt terms">
-      <p className="mont">Terms and Conditions</p>
+      <p className="mont">Terms &#38; Conditions All Rights Reserved.</p>
       <span className="lato lato-l w-65">
-        To enhance your experience on our site, we use 'cookies'. By browsing
-        our site you accept this.This is a third-party promotion and the
-        promoted product is not responsible for this site.You must be 18+ years
-        (or the legal age of gambling where you live) to use our page. If you
-        are not please leave
+      This website is not affiliated with or endorsed by any of the mentioned brands and does not claim to represent, 
+      or own any of the trademarks, tradenames or rights associated with any of the products which are the property 
+      of their respective owners who do not own, endorse, or promote this site. All images on this site are readily available 
+      in various places on the Internet and believed to be in public domain according to the U.S. Copyright Fair Use Act 
+      (title 17, U.S. Code). *Trial offers offered on the last page require shipping and handling fees. See manufacturer’s 
+      site for details as terms vary with offers.
       </span>
     </header>
   );
