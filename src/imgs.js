@@ -45,24 +45,19 @@ export const srcs = {
   ],
   multiplier: [
     {
-      src: "./img/newImgs/Bike.png",
-      alt: "Vanmoof bicycle",
-      id:1
-    },
-    {
       src: "./img/newImgs/Kettle.png",
       alt: "Kettle",
-      id:2
+      id:1
     },
     {
       src: "./img/newImgs/refr.png",
       alt: "Mini Fridge",
-      id:3
+      id:2
     },
     {
       src: "./img/newImgs/dys.png",
       alt: "Dyson Vaccuum cleaner",
-      id:4
+      id:3
     },
     {
       src: "./img/newImgs/Lose.png",
@@ -71,61 +66,51 @@ export const srcs = {
     {
       src: "./img/newImgs/coffee.png",
       alt: "Coffee Maker",
-      id:5
+      id:4
     },
   ],
   multiplier2: [
     {
-      src: "./img/newImgs/Bike.png",
-      alt: "Vanmoof bicycle",
-      id:1
-    },
-    {
       src: "./img/newImgs/Kettle.png",
       alt: "Kettle",
-      id:2
+      id:1
     },
     {
       src: "./img/newImgs/refr.png",
       alt: "Mini Fridge",
-      id:3
+      id:2
     },
     {
       src: "./img/newImgs/dys.png",
       alt: "Dyson Vaccuum cleaner",
-      id:4
+      id:3
     },
     {
       src: "./img/newImgs/coffee.png",
       alt: "Coffee Maker",
-      id:5
+      id:4
     },
   ],
   spins: [
     {
-      src: "./img/newImgs/Bike.png",
-      alt: "Vanmoof bicycle",
-      id:1
-    },
-    {
       src: "./img/newImgs/Kettle.png",
       alt: "Kettle",
-      id:2
+      id:1
     },
     {
       src: "./img/newImgs/refr.png",
       alt: "Mini Fridge",
-      id:3
+      id:2
     },
     {
       src: "./img/newImgs/dys.png",
       alt: "Dyson Vaccuum cleaner",
-      id:4
+      id:3
     },
     {
       src: "./img/newImgs/coffee.png",
       alt: "Coffee Maker",
-      id:5
+      id:4
     },
     {
       src: "./img/newImgs/Lose.png",
@@ -134,29 +119,24 @@ export const srcs = {
   ],
   back: [
     {
-      src: "./img/newImgs/Bike.png",
-      alt: "Vanmoof bicycle",
-      id:1
-    },
-    {
       src: "./img/newImgs/Kettle.png",
       alt: "Kettle",
-      id:2
+      id:1
     },
     {
       src: "./img/newImgs/refr.png",
       alt: "Mini Fridge",
-      id:3
+      id:2
     },
     {
       src: "./img/newImgs/dys.png",
       alt: "Dyson Vaccuum cleaner",
-      id:4
+      id:3
     },
     {
       src: "./img/newImgs/coffee.png",
       alt: "Coffee Maker",
-      id:5
+      id:4
     },
     {
       src: "./img/newImgs/Lose.png",
@@ -165,29 +145,24 @@ export const srcs = {
   ],
   back2: [
     {
-      src: "./img/newImgs/Bike.png",
-      alt: "Vanmoof bicycle",
-      id:1
-    },
-    {
       src: "./img/newImgs/Kettle.png",
       alt: "Kettle",
-      id:2
+      id:1
     },
     {
       src: "./img/newImgs/refr.png",
       alt: "Mini Fridge",
-      id:3
+      id:2
     },
     {
       src: "./img/newImgs/dys.png",
       alt: "Dyson Vaccuum cleaner",
-      id:4
+      id:3
     },
     {
       src: "./img/newImgs/coffee.png",
       alt: "Coffee Maker",
-      id:5
+      id:4
     },
     {
       src: "./img/newImgs/Lose.png",

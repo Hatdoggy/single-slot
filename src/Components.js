@@ -31,7 +31,7 @@ const Container = (props) => {
 const Header = () => {
   return (
     <header className="bg-org flx flx-jc-ce flx-ai-ce txt-wht p-20  shdw-btn">
-      <h4 className="mont">Win cash daily!</h4>
+    <h4 className="mont">{window.txt.head}</h4>
     </header>
   );
 };
@@ -39,13 +39,14 @@ const Header = () => {
 const Terms = () => {
   return (
     <header className="flx-col flx flx-jc-ce flx-ai-strt terms">
-      <p className="mont">Terms and Conditions</p>
+      <p className="mont">Terms &#38; Conditions All Rights Reserved.</p>
       <span className="lato lato-l w-65">
-        To enhance your experience on our site, we use 'cookies'. By browsing
-        our site you accept this.This is a third-party promotion and the
-        promoted product is not responsible for this site.You must be 18+ years
-        (or the legal age of gambling where you live) to use our page. If you
-        are not please leave
+      This website is not affiliated with or endorsed by any of the mentioned brands and does not claim to represent, 
+      or own any of the trademarks, tradenames or rights associated with any of the products which are the property 
+      of their respective owners who do not own, endorse, or promote this site. All images on this site are readily available 
+      in various places on the Internet and believed to be in public domain according to the U.S. Copyright Fair Use Act 
+      (title 17, U.S. Code). *Trial offers offered on the last page require shipping and handling fees. See manufacturer’s 
+      site for details as terms vary with offers.
       </span>
     </header>
   );
@@ -244,11 +245,10 @@ const Final = () => {
         {window.txt.finTxt.first} <span className="mont" id="productName">{window.txt.src.alt}</span>{" "} for {firstname ? `:${firstname} ${surname} ${city}` : ""}
       </p>
       <div id="prodsCnt" className="flx flx-col flx-jc-ce flx-ai-ce w-100 m-t-2">
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='1' onClick={clicked}>{window.txt.prods[0]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='2' onClick={clicked}>{window.txt.prods[1]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='3' onClick={clicked}>{window.txt.prods[2]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='4' onClick={clicked}>{window.txt.prods[3]}</button>
-      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='5' onClick={clicked}>{window.txt.prods[4]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='1' onClick={clicked}>{window.txt.prods[1]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='2' onClick={clicked}>{window.txt.prods[2]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='3' onClick={clicked}>{window.txt.prods[3]}</button>
+      <button className="btn btn-trans mont p-15 w-90 m-t-2" data-id='4' onClick={clicked}>{window.txt.prods[4]}</button>
       </div>
       <p className="lato lato-l txt-al-ce m-t-5"> {window.txt.final}</p>
       <button
